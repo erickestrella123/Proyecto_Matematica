@@ -33,10 +33,10 @@ public class Jfrm_Principal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Jbtn_Medidas_Peso = new javax.swing.JButton();
+        Jbtn_Porcentaje = new javax.swing.JButton();
+        Jbtn_Medidas_Capacidad = new javax.swing.JButton();
+        Jbnt_Numeracion_Romana = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
 
@@ -58,31 +58,41 @@ public class Jfrm_Principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
         jLabel3.setText("Matemáticas");
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("Medidas de Peso");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Jbtn_Medidas_Peso.setBackground(new java.awt.Color(255, 255, 255));
+        Jbtn_Medidas_Peso.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Jbtn_Medidas_Peso.setText("Medidas de Peso");
+        Jbtn_Medidas_Peso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Jbtn_Medidas_PesoActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setText("Porcentaje");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Jbtn_Porcentaje.setBackground(new java.awt.Color(255, 255, 255));
+        Jbtn_Porcentaje.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Jbtn_Porcentaje.setText("Porcentaje");
+        Jbtn_Porcentaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Jbtn_PorcentajeActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton3.setText("Medidas de Capacidad");
+        Jbtn_Medidas_Capacidad.setBackground(new java.awt.Color(255, 255, 255));
+        Jbtn_Medidas_Capacidad.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Jbtn_Medidas_Capacidad.setText("Medidas de Capacidad");
+        Jbtn_Medidas_Capacidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jbtn_Medidas_CapacidadActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton4.setText("Numeración Romana");
+        Jbnt_Numeracion_Romana.setBackground(new java.awt.Color(255, 255, 255));
+        Jbnt_Numeracion_Romana.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Jbnt_Numeracion_Romana.setText("Numeración Romana");
+        Jbnt_Numeracion_Romana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jbnt_Numeracion_RomanaActionPerformed(evt);
+            }
+        });
 
         jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -99,9 +109,9 @@ public class Jfrm_Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addComponent(jButton1)
+                        .addComponent(Jbtn_Medidas_Peso)
                         .addGap(91, 91, 91)
-                        .addComponent(jButton3))
+                        .addComponent(Jbtn_Medidas_Capacidad))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -120,9 +130,9 @@ public class Jfrm_Principal extends javax.swing.JFrame {
                         .addGap(11, 11, 11))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(jButton2)
+                        .addComponent(Jbtn_Porcentaje)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
+                        .addComponent(Jbnt_Numeracion_Romana)))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -140,12 +150,12 @@ public class Jfrm_Principal extends javax.swing.JFrame {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
+                    .addComponent(Jbtn_Medidas_Peso)
+                    .addComponent(Jbtn_Medidas_Capacidad))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
+                    .addComponent(Jbtn_Porcentaje)
+                    .addComponent(Jbnt_Numeracion_Romana))
                 .addGap(43, 43, 43)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -167,13 +177,29 @@ public class Jfrm_Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void Jbtn_Medidas_PesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_Medidas_PesoActionPerformed
+        Medidas_Peso.Jfrm_Mediadas_Peso Medidas_peso = new Medidas_Peso.Jfrm_Mediadas_Peso();
+        Medidas_peso.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Jbtn_Medidas_PesoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void Jbtn_PorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_PorcentajeActionPerformed
+        Porcentaje.Jfrm_Porcentaje Porcentaje = new Porcentaje.Jfrm_Porcentaje();
+        Porcentaje.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Jbtn_PorcentajeActionPerformed
+
+    private void Jbtn_Medidas_CapacidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbtn_Medidas_CapacidadActionPerformed
+        Medidas_Capacidad.Jfrm_Medidas_Capacidad Medidas_Capacidad = new Medidas_Capacidad.Jfrm_Medidas_Capacidad();
+        Medidas_Capacidad.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Jbtn_Medidas_CapacidadActionPerformed
+
+    private void Jbnt_Numeracion_RomanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbnt_Numeracion_RomanaActionPerformed
+        Numeracion_Romana.Jfrm_Numeracion_Romana Numeracion_Romana = new Numeracion_Romana.Jfrm_Numeracion_Romana();
+        Numeracion_Romana.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Jbnt_Numeracion_RomanaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,10 +237,10 @@ public class Jfrm_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton Jbnt_Numeracion_Romana;
+    private javax.swing.JButton Jbtn_Medidas_Capacidad;
+    private javax.swing.JButton Jbtn_Medidas_Peso;
+    private javax.swing.JButton Jbtn_Porcentaje;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

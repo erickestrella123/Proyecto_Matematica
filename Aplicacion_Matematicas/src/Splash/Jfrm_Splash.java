@@ -4,22 +4,21 @@
  */
 package Splash;
 
+import com.sun.tools.javac.Main;
+
 /**
  *
  * @author Erick
  */
 public class Jfrm_Splash extends javax.swing.JFrame {
- 
-    private Thread tiempo = null;
+
+    
     /**
      * Creates new form Jfrm_Splash
      */
     public Jfrm_Splash() {
         initComponents();
         this.setLocationRelativeTo(null);
-//        AWTUtilities.setWindowOpaque(this, false);
-//        tiempo = new Thread(this);
-//        tiempo.start();
     }
 
     /**
@@ -33,7 +32,7 @@ public class Jfrm_Splash extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Jlbl_Cargando = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -43,7 +42,7 @@ public class Jfrm_Splash extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Splash_Fondo.jpg"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1234.gif"))); // NOI18N
+        Jlbl_Cargando.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/1234.gif"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -52,7 +51,7 @@ public class Jfrm_Splash extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Jlbl_Cargando, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
         );
         jPanel1Layout.setVerticalGroup(
@@ -60,7 +59,7 @@ public class Jfrm_Splash extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Jlbl_Cargando, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
 
@@ -105,17 +104,43 @@ public class Jfrm_Splash extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        
+        /* Create and display the form */
+        // Creamos el Splash
+        // Instanciamos la clase jfrm_Splash
+        
+        Jfrm_Splash splash= new Jfrm_Splash();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Jfrm_Splash().setVisible(true);
             }
         });
+        
+        Jfrm_Splash main = new Jfrm_Splash();
+        
+        try{
+            // Iniciamos un bucle para hacer el splash
+            
+            for(int i=0; i<100; i++){
+                Thread.sleep(9);
+                
+            }
+        }catch (Exception e){
+        }
+        Principal.Jfrm_Principal Principal = new Principal.Jfrm_Principal();
+        // Quitamos de vista el splash
+        new Jfrm_Splash().setVisible(false);
+        // Cerramos el Splash
+        new Jfrm_Splash().dispose();
+        // Hacemos visible el main
+        Principal.setVisible(true);    
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Jlbl_Cargando;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
